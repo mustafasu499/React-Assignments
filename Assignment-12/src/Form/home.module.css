@@ -1,0 +1,43 @@
+.home_main_box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0px;
+}
+.home_box {
+  font-family: Roboto;
+  background: rgb(63, 73, 251);
+  background: linear-gradient(
+    52deg,
+    rgba(63, 73, 251, 1) 0%,
+    rgba(72, 116, 180, 1) 41%,
+    rgba(206, 71, 76, 1) 68%,
+    rgba(252, 70, 92, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.products_box {
+  font-family: Roboto;
+  background: rgb(63, 73, 251);
+  background: linear-gradient(
+    52deg,
+    rgba(63, 73, 251, 1) 0%,
+    rgba(72, 116, 180, 1) 41%,
+    rgba(206, 71, 76, 1) 68%,
+    rgba(252, 70, 92, 1) 100%
+  );
+  width: 100%;
+  height: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
