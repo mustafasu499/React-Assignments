@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Mrs. Dennis Schulist",
+      "username": "Leopoldo_Corkery",
+      "email": "Karley_Dach@jasper.info",
+      "phone": "1-477-935-8478 x6430",
+      "website": "ola.org"
+    },
+    {
+      "name": "mustafa",
+      "email": "mustafa@gmail.com",
+      "username": "g_mustafa",
+      "phone": "5654",
+      "id": 2
+    },
+    {
+      "name": "shehry",
+      "email": "shehry@gmail.com",
+      "username": "its_shehry",
+      "phone": "23165456",
+      "id": 3
+    }
+  ]
+}
