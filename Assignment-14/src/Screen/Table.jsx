@@ -11,6 +11,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -34,6 +35,13 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 export default function Tables({ data }) {
   const navigate = useNavigate();
+
+  const handleDeletUser = (id) => {
+    axios
+      .delete(`http://localhost:3000/users/${id}`)
+      .then((res) => alert("Deleted Successfully"))
+      .catch((err) => console.log(err));
+  };
   return (
     <>
       <Button
@@ -49,6 +57,8 @@ export default function Tables({ data }) {
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>
             <TableRow>
+              <StyledTableCell>ID</StyledTableCell>
+
               <StyledTableCell>Name</StyledTableCell>
               <StyledTableCell align="right">User Name</StyledTableCell>
               <StyledTableCell align="right">Email</StyledTableCell>
@@ -60,14 +70,23 @@ export default function Tables({ data }) {
             {data.map((e, i) => (
               <StyledTableRow key={i}>
                 <StyledTableCell component="th" scope="row">
+                  {e.id}
+                </StyledTableCell>
+                <StyledTableCell component="th" scope="row">
                   {e.name}
                 </StyledTableCell>
                 <StyledTableCell align="right">{e.username}</StyledTableCell>
                 <StyledTableCell align="right">{e.email}</StyledTableCell>
                 <StyledTableCell align="right">{e.phone}</StyledTableCell>
                 <StyledTableCell align="right">
-                  <DeleteIcon sx={{ color: "red", marginRight: 3 }} />
-                  <EditIcon sx={{ color: "blue" }} />
+                  <DeleteIcon
+                    onClick={() => handleDeletUser(e.id)}
+                    sx={{ color: "red", marginRight: 3, cursor: "pointer" }}
+                  />
+                  <EditIcon
+                    onClick={() => navigate(`/edituser/${e.id}`)}
+                    sx={{ color: "blue", cursor: "pointer" }}
+                  />
                 </StyledTableCell>
               </StyledTableRow>
             ))}
