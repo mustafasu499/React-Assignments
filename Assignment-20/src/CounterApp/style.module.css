@@ -1,0 +1,15 @@
+.main_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.counter_box{
+    width: 600px;
+    height: 400px;
+
+    text-align: center;
+    padding: 20px;
+    
+}
