@@ -1,0 +1,12 @@
+.hom_section {
+  background-color: #5d6265;
+}
+
+.home_Bg_img {
+  width: 100%;
+  height: 92.5vh;
+  background-image: url(../assets/HomeImg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #5d6265;
+}
